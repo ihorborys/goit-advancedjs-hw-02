@@ -51,12 +51,10 @@
   border-radius: 8px;
   color: #989898;
   background-color: #CFCFCF;
-  /*cursor: default;*/
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .datetime-btn.active {
-  /*cursor: pointer;*/
   color: #FFFFFF;
   background-color: #4E75FF;
 
@@ -78,7 +76,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 
   color: #2E2F42;
 }
