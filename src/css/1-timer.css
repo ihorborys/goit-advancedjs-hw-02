@@ -1,0 +1,98 @@
+.container.datetime-timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.datetime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 32px;
+}
+
+.datetime-input {
+  width: 272px;
+  height: 40px;
+  background-color: #D9D9D9;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-right: 8px;
+  border: 1px solid #808080;
+  color: #2E2F42;
+  transition: border 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.datetime-input.active {
+  border: 1px solid #4E75FF;
+  color: #000000;
+}
+
+.datetime-input.disable {
+  border: 1px solid #808080;
+  color: #808080;
+}
+
+.datetime-input:hover {
+  border: 1px solid #2E2F42;
+  color: #000000;
+}
+
+.datetime-btn {
+  width: 75px;
+  height: 40px;
+
+  font-weight: 500;
+  letter-spacing: 0.04em;
+
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #989898;
+  background-color: #CFCFCF;
+  /*cursor: default;*/
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.datetime-btn.active {
+  /*cursor: pointer;*/
+  color: #FFFFFF;
+  background-color: #4E75FF;
+
+}
+
+.datetime-btn:hover {
+  color: #FFFFFF;
+  background-color: #6C8CFF;
+}
+
+.timer {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  color: #2E2F42;
+}
+
+.value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 55px;
+  line-height: 1.2;
+  font-size: 40px;
+}
+
+.label {
+  text-transform: uppercase;
+}

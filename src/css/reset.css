@@ -44,6 +44,13 @@ form {
   border: none;
 }
 
+fieldset {
+  border: none; /* Прибирає рамку */
+  margin: 0;
+  padding: 0;
+  min-width: 0; /* Деякі браузери додають мінімальну ширину */
+}
+
 input, textarea, select, button {
   margin: 0;
   padding: 0;

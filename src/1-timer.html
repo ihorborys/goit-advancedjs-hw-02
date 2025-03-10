@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Advanced JS HW - 1. Gallery</title>
+  <title>Advanced JS HW - 2. Timer</title>
   <link rel="stylesheet" href="./css/styles.css" />
-  <script type="module" src="./js/1-gallery.js" defer></script>
+  <script type="module" src="js/1-timer.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -16,37 +16,41 @@
             <a href="./index.html" class="nav-link">Home</a>
           </div>
           <div class="nav-item">
-            <a href="./2-form.html" class="nav-link">Form</a>
+            <a href="2-snackbar.html" class="nav-link">Snackbar</a>
           </div>
         </div>
       </div>
     </div>
   </header>
   <main>
-    <div class="container gallery">
-      <input type="text" id="datetime-picker" />
-      <button type="button" data-start>Start</button>
 
+    <div class="container datetime-timer">
+      <div class="container title">
+        <h2 class="title">Timer</h2>
+      </div>
+      <div class="datetime">
+        <label class="datetime-label" for="datetime-picker"></label>
+        <input class="datetime-input" type="text" id="datetime-picker" />
+        <button class="datetime-btn" type="button" data-start>Start</button>
+      </div>
       <div class="timer">
-        <div class="field">
-          <span class="value" data-days>00</span>
+        <div class="field ">
+          <span class="value js-timer-days" data-days>00</span>
           <span class="label">Days</span>
         </div>
-        <div class="field">
-          <span class="value" data-hours>00</span>
+        <div class="field ">
+          <span class="value js-timer-hours" data-hours>00</span>
           <span class="label">Hours</span>
         </div>
         <div class="field">
-          <span class="value" data-minutes>00</span>
+          <span class="value js-timer-minutes" data-minutes>00</span>
           <span class="label">Minutes</span>
         </div>
         <div class="field">
-          <span class="value" data-seconds>00</span>
+          <span class="value  js-timer-seconds" data-seconds>00</span>
           <span class="label">Seconds</span>
         </div>
       </div>
-
-
     </div>
   </main>
   <footer class="footer">
