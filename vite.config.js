@@ -6,7 +6,6 @@ import SortCss from 'postcss-sort-media-queries';
 
 export default defineConfig(({ command }) => {
   return {
-    base: "./", // Виправляє шляхи до стилів у продакшені
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
