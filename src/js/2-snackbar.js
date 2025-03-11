@@ -9,25 +9,24 @@ const delayInput = document.querySelector('.delay-input')
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-
   const delay = Number(delayInput.value)
   const stateValue = document.querySelector('input[name="state"]:checked')
 
 
-  const fulfilledMessage = (message) => {
+  const fulfilledMessage = (delay) => {
     iziToast.success({
       title: `✅ Fulfilled promise in ${delay} ms`,
-      message: message,
+      message: '',
       position: 'topRight',
       color: 'green',
       icon: "",
     });
   };
 
-  const rejectedMessage = (message) => {
+  const rejectedMessage = (delay) => {
     iziToast.error({
       title: `❌ Rejected promise in ${delay} ms`,
-      message: message,
+      message: '',
       position: 'topRight',
       color: 'red',
       icon: ""
@@ -40,10 +39,10 @@ form.addEventListener('submit', (event) => {
     setTimeout(() => {
 
       if (stateValue.value === 'fulfilled') {
-        resolve();
+        resolve(delay);
 
       } else {
-        reject();
+        reject(delay);
       }
 
     }, delay);
@@ -51,8 +50,8 @@ form.addEventListener('submit', (event) => {
   });
 
   promiseGenerator
-    .then(() => fulfilledMessage(''))
-    .catch(() => rejectedMessage(''));
+    .then((delay) => fulfilledMessage(delay))
+    .catch((delay) => rejectedMessage(delay));
 
   form.reset()
 
